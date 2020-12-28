@@ -3,10 +3,10 @@
 
 void TimChange();
 
-#define LP_Length 5
+#define LP_Length 10
 
-volatile uint16_t T_High[LP_Length] = {0};
-volatile uint16_t T_Low[LP_Length] = {0};
+volatile uint32_t T_High[LP_Length] = {0};
+volatile uint32_t T_Low[LP_Length] = {0};
 
 volatile uint8_t lowpassID = 0;
 
@@ -27,7 +27,7 @@ void setup() {
   digitalWrite(PA6, LOW);
 
   TIM.pause();
-  TIM.setPrescaleFactor(64);
+  TIM.setPrescaleFactor(1);
   TIM.resume();
 
 
@@ -51,8 +51,12 @@ void loop() {
   l = l /LP_Length;
   
 
-  uint16_t DC = h*255 / (h+l);
+  uint32_t DC = h*1000 / (h+l);
   Serial.println(DC);
+  //Serial.print(",");
+  //Serial.print(h);
+  //Serial.print(",");
+  //Serial.println(l);
 
 }
 
