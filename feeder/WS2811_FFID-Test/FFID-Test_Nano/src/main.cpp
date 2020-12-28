@@ -4,6 +4,8 @@
 Adafruit_NeoPixel pixel = Adafruit_NeoPixel(1, 2, NEO_RGB + NEO_KHZ800);
 
 
+uint8_t i = 0;
+
 void setup() {
   // put your setup code here, to run once:
 
@@ -18,9 +20,7 @@ void loop() {
   // put your main code here, to run repeatedly:
 
 
-  delay(2000);
-
-  int i = round(random(0,255));
+  delay(1000);
 
   pixel.setPixelColor(0, i, i, i);
 
@@ -28,4 +28,5 @@ void loop() {
 
   pixel.show();
 
+  i++; //will overflow and reset to 0 after overflow
 }
