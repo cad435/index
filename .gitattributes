@@ -1,0 +1,8 @@
+# kicad locking
+
+*.sch lockable
+*.kicad_pcb lockable
+
+# freecad locking
+
+*.FCStd lockable

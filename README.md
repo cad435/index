@@ -16,6 +16,9 @@ The Index is controlled with [OpenPnP](https://github.com/openpnp/openpnp). Open
 
 The motherboard communicates with the feeders over RS-485. After the feeder receieves a command from the motherboard, it sends a confirmation or error message back. This is then sent back to OpenPnP. Situations where the feeder would send an error message back would be a tape runout or jam. 
 
+## Documentation
+Documentation is currently hosted [here](https://docs.indexmachines.io/docs/), it's still a work in progress with some preliminary build instructions and contributions are welcome.
+
 ## Contributing
 If you would like to contribute to the project, awesome! Check out the [contributing page](CONTRIBUTING.md) to get started.
 
@@ -32,8 +35,8 @@ Many boards in the design are also used in a mechanical way, meaning some specif
 
 #### Feeder Indexing Wheel Configuration
 - Board Thickness: 1mm
-- Pad Plating: ENIG
-- Silk/Mask: White/Matte Black
+- Pad Plating: Any
+- Silk/Mask: Any
 
 ### 3D Printing
 During development of the Index, all parts were printed in PLA. A few parts in particular require quite a high strength if being printed. Of course, every printer runs a bit different, and these are just guidelines to illustrate the necessary strength difference between different parts.
